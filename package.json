@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "getutil",
+  "name": "a-util",
   "workspaces": [
     "packages/*"
   ],
@@ -10,7 +10,7 @@
   "scripts": {
     "prepublish": "yarn build",
     "prettier": "prettier --write 'packages/*/src/**'",
-    "pre-commit": "yarn lint:fix && yarn prettier && yarn lint:ts",
+    "pre-commit": "yarn prettier",
     "test": "lerna run test",
     "lint": "tslint --project .",
     "lint:fixall": "tslint --fix --project .",
@@ -55,10 +55,5 @@
     "ts-jest": "^24.1.0",
     "tslint": "5.10.0",
     "typescript": "^3.5.3"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn pre-commit"
-    }
   }
 }

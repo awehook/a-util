@@ -13,7 +13,7 @@ function configure(pkg, env, target) {
   // const isProd = env === 'production';
   // const isUmd = target === 'umd';
   const isModule = target === 'module';
-  const pkgDir = pkg.name.substr('@getutil/'.length);
+  const pkgDir = pkg.name.substr('@a-util/'.length);
   const input = resolvePackage(`${pkgDir}/src/index.ts`);
   // console.log('input:', input);
   const deps = []

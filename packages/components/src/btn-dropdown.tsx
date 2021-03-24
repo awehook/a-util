@@ -6,23 +6,22 @@ const Div = styled.div`
   display: flex;
 `
 
-const Btn = styled.button``
-
 const DropdownBtn = styled.div``
 
 interface Props {
+  className?: string
   btnElement: React.ReactElement
   dropdownBtnElement: React.ReactElement
   dropdownElement: React.ReactElement
 }
 
 export function BtnDropdown(props: Props) {
-  const { btnElement, dropdownBtnElement, dropdownElement } = props
+  const { className, btnElement, dropdownBtnElement, dropdownElement } = props
   return (
-    <Div>
-      <Btn>{btnElement}</Btn>
+    <Div className={className}>
+      {btnElement}
       <Popover2>
-        <DropdownBtn>{dropdownBtnElement}</DropdownBtn>
+        {dropdownBtnElement}
         {dropdownElement}
       </Popover2>
     </Div>
